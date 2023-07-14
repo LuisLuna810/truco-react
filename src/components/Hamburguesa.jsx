@@ -49,9 +49,6 @@ export function MenuHamburguesa() {
           Reiniciar
         </span>
         <span className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white hover:rounded-lg hover:cursor-pointer ">
-          Cambiar nombres
-        </span>
-        <span className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white hover:rounded-lg hover:cursor-pointer ">
           Limite de puntos
         </span>
       </div>
