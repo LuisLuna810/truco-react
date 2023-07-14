@@ -1,10 +1,12 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import menu from "../assets/menu.png";
 import close from "../assets/close.png";
+import { dataContext } from "../context/dataContext.js";
 
 export function MenuHamburguesa() {
   const [abierto, setAbierto] = useState(false);
   const menuRef = useRef(null);
+  const { handleRestart } = useContext(dataContext);
 
   function handleClick() {
     setAbierto(!abierto);
@@ -38,10 +40,15 @@ export function MenuHamburguesa() {
           abierto ? "block" : "hidden"
         } absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg z-10`}
       >
-        <span className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white hover:rounded-lg hover:cursor-pointer  ">
+        <span
+          className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white hover:rounded-lg hover:cursor-pointer"
+          onClick={() => {
+            handleRestart();
+          }}
+        >
           Reiniciar
         </span>
-        <span className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white hover:rounded-lg hover:cursor-pointer " onClick={()=>{console.log('hola')}}>
+        <span className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white hover:rounded-lg hover:cursor-pointer ">
           Cambiar nombres
         </span>
         <span className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white hover:rounded-lg hover:cursor-pointer ">

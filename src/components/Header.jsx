@@ -1,7 +1,7 @@
 import restart from "../assets/restart.png";
 import { MenuHamburguesa } from "./Hamburguesa";
-//import lapiz from "../assets/pencil.png";
 export function Header() {
+    
   return (
     <div className="flex flex-col w-full rounded bg-gradient-to-r to-cyan-500 from-blue-500">
       <div className="grid grid-cols-5 gap-1 text-white py-4 px-6">
