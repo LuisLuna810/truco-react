@@ -3,9 +3,8 @@
 @tailwind utilities;
 
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
   text-align: center;
+  margin-top: 15vh;
 }
 
 .logo {
