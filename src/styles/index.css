@@ -71,9 +71,3 @@ button {
     padding-bottom: 300px;
   }
 }
-
-@media screen and (max-width: 639px) {
-  .sm-pb {
-    padding-bottom: 300px;
-  }
-}
