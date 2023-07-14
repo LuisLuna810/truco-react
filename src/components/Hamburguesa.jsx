@@ -27,7 +27,7 @@ export function MenuHamburguesa() {
   return (
     <div className="relative" ref={menuRef}>
       <button
-        className="bg-slate-900 text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900"
+        className="bg-slate-700 text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900"
         onClick={handleClick}
       >
         <img src={abierto ? close : menu} alt="" className="h-4 w-4" />

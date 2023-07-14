@@ -5,11 +5,11 @@ import "./styles/App.css";
 
 function App() {
   return (
-    <body className="bg-zinc-900 rounded flex flex-col ">
+    <div className="bg-zinc-900 rounded flex flex-col h-full pb-10">
       <Header />
       <Nombres />
       <Puntos />
-    </body>
+    </div>
   );
 }
 
