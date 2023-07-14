@@ -5,7 +5,7 @@ import "./styles/App.css";
 
 function App() {
   return (
-    <div className="bg-zinc-900 rounded flex flex-col h-screen w-full">
+    <div className="bg-zinc-900 rounded flex flex-col h-full w-full pb-12">
       <Header />
       <Nombres />
       <Puntos />
