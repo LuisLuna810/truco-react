@@ -16,8 +16,8 @@ export function Contador() {
 
   return (
     <div className="container">
-      <div className="mt-12 h-52 text-8xl">{puntos}</div>
-      <div><Botones handleIncrement={handleIncrement} handleDecrement={handleDecrement}/></div>
+      <div className="mt-12 h-52 text-8xl sm-pb md-pb">{puntos}</div>
+      <div className><Botones handleIncrement={handleIncrement} handleDecrement={handleDecrement}/></div>
     </div>
   );
 }
