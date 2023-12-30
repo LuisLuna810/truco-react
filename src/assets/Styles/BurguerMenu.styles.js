@@ -10,7 +10,7 @@ export const BurguerMenuStyles = () => {
       justifyContent: "start",
       gap: "1rem",
       position: "absolute",
-      width: isMobile ? "60dvw" : "18dvw",
+      width: isMobile ? "65dvw" : "18dvw",
       height: "fit-content",
       backgroundColor: "#FFF",
       zIndex: 1000,
