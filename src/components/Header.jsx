@@ -1,17 +1,34 @@
-import restart from "../assets/restart.png";
-import { MenuHamburguesa } from "./Hamburguesa";
+import { TeamNames } from "./TeamNames";
+import { HeaderStyles } from "../assets/Styles/Header.styles";
+import { BurguerMenuIcon, CloseIcon } from "../assets/svg/Svg";
+import { Button } from "@mui/material";
+import { Points } from "./Points";
+import { BurguerMenu } from "./BurguerMenu";
+import { useStore } from "../store/store";
+
+
 export function Header() {
-    
+  const styles = HeaderStyles();
+  const { openMenu,setOpenMenu} = useStore((state) => ({
+    openMenu: state.openMenu,
+    setOpenMenu: state.setOpenMenu
+  }));
+
   return (
-    <div className="flex flex-col w-full rounded bg-gradient-to-r to-cyan-500 from-blue-500">
-      <div className="grid grid-cols-5 gap-1 text-white py-4 px-6">
-        <h1 className="col-span-4 text-2xl text-left font-bold  ">
-          Truco
-        </h1>
-        <div>
-        <MenuHamburguesa />
-        </div>
+    <>
+      <div className="bg-zinc-900" style={styles.container} >
+        <h1 style={{ fontWeight: "bold", fontSize: "1.8rem" }}>Truco</h1>
+        <Button sx={{ color: "#FFF" }} onClick={setOpenMenu}>
+          {!openMenu ? <BurguerMenuIcon />:<CloseIcon/>}
+        </Button>
+      {openMenu? <BurguerMenu/>: <></>}
       </div>
-    </div>
+      <div style={styles.divTeams}>
+        <TeamNames />
+      </div>
+      <div style={styles.divPoints}>
+        <Points/>
+      </div>
+    </>
   );
 }
