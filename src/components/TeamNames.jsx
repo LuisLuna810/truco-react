@@ -22,6 +22,7 @@ export const TeamNames = () => {
         onChange={(e) => handleTeamChange("teamA", e.target.value)}
         style={styles.input}
         placeholder="Team A"
+        maxLength={20}
       />
       <input
         type="text"
@@ -29,6 +30,7 @@ export const TeamNames = () => {
         onChange={(e) => handleTeamChange("teamB", e.target.value)}
         style={styles.input}
         placeholder="Team B"
+        maxLength={20}
       />
     </div>
   );

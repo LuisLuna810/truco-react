@@ -5,12 +5,15 @@ import { useStore } from "../store/store";
 import { useEffect, useRef } from "react";
 export const BurguerMenu = () => {
   const styles = BurguerMenuStyles();
-  const { openMenu, setOpenMenu, restartPoints } = useStore((state) => ({
+  const { openMenu, setOpenMenu, restartPoints, setLimitPoints, limitIndex, listPoints  } = useStore((state) => ({
     openMenu: state.openMenu,
     setOpenMenu: state.setOpenMenu,
-    restartPoints: state.restartPoints
+    restartPoints: state.restartPoints,
+    setLimitPoints: state.setLimitPoints,
+    listPoints: state.listPoints,
+    limitIndex:state.limitIndex
   }));
-
+  console.log(limitIndex);
   const menuRef = useRef(null);
 
   useEffect(() => {
@@ -33,9 +36,33 @@ export const BurguerMenu = () => {
         <CloseIcon />
       </Button>
       <div style={styles.buttonsContainer}>
-      <Button sx={styles.menuButtons} onClick={restartPoints}><RestartIcon/><span>Reiniciar</span> </Button>
-      <Button sx={styles.menuButtons}><NetworkIcon/><span>Crear sesión</span></Button>
-      <Button sx={styles.menuButtons}><strong>18</strong><span>Limite de puntaje</span></Button>
+        <Button sx={styles.menuButtons} onClick={restartPoints}>
+          {" "}
+          <div
+            style={{ width: "4rem", display: "flex", justifyContent: "center" }}
+          >
+            <RestartIcon />
+          </div>
+          <span>Reiniciar</span>{" "}
+        </Button>
+        <Button sx={styles.menuButtons}>
+          {" "}
+          <div
+            style={{ width: "4rem", display: "flex", justifyContent: "center" }}
+          >
+            <NetworkIcon />
+          </div>
+          <span>Crear sesión</span>
+        </Button>
+        <Button sx={styles.menuButtons} onClick={setLimitPoints}>
+          {" "}
+          <div
+            style={{ width: "4rem", display: "flex", justifyContent: "center" }}
+          >
+            <strong>{listPoints[limitIndex]}</strong>
+          </div>
+          <span style={{ marginLeft: "0.1rem" }}>Limite de puntaje</span>
+        </Button>
       </div>
     </div>
   );

@@ -28,6 +28,10 @@ export const useStore = create((set) => ({
   restartPoints: () => set({ pointsTeamA: 0, pointsTeamB: 0 }),
   // Open menu burger
   openMenu: false,
-  // Modifica setOpenMenu para aceptar el estado actual y cambiarlo
   setOpenMenu: () => set((state) => ({ openMenu: !state.openMenu })),
+
+  //Points limits 
+  listPoints:["15","18","30"],
+  limitIndex: 0,
+  setLimitPoints: ()=>set((state)=>({limitIndex: state.limitIndex >= state.listPoints.length - 1? 0 : state.limitIndex + 1}))
 }));
