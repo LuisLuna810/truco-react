@@ -12,10 +12,11 @@ export const PointsStyles = () => {
       fontSize:isMobile? "6rem": "8rem",
       fontWeight: "bold",
       alignItems: "center",
+      
     },
     span:{
         width:"100%",
-        textAlign:"center"
+        textAlign:"center",
     }
   };
 };

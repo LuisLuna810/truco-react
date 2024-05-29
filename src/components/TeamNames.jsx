@@ -12,8 +12,6 @@ export const TeamNames = () => {
   const handleTeamChange = (team, name) => {
     teamName(team, name);
   };
-
-  console.log(teamA);
   return (
     <div style={{ display: "flex", justifyContent: "space-between" }}>
       <input

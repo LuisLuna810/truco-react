@@ -4,10 +4,9 @@ import { Buttons } from "./Buttons";
 
 
 export const Points = () => {
-  const { pointsTeamA, pointsTeamB, maxPoints } = useStore((state) => ({
+  const { pointsTeamA, pointsTeamB, } = useStore((state) => ({
     pointsTeamA: state.pointsTeamA,
     pointsTeamB: state.pointsTeamB,
-    maxPoints: state.listPoints[state.limitIndex],
   }));
   const styles = PointsStyles();
   return (

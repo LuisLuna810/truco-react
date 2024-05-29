@@ -8,7 +8,6 @@ export const BurguerMenuStyles = () => {
       flexDirection: "column",
       alignItems: "start",
       justifyContent: "start",
-      gap: "1rem",
       position: "absolute",
       width: isMobile ? "100%" : "18dvw",
       height: "fit-content",
@@ -18,30 +17,32 @@ export const BurguerMenuStyles = () => {
       top: 0,
       borderTopRightRadius: "1rem",
       borderEndStartRadius: "1rem",
-      padding: "1rem 0 3rem 0",
     },
     buttonClose: {
-      position: "absolute",
-      top: isMobile ? 15 : 15,
-      right: 10,
+      display:"flex",
+      width:"100%",
+      justifyContent: "end",
+      padding: "15px 40px 0 0",
       color: "#000",
       "&:hover": { backgroundColor: "transparent" },
       zIndex: "1000",
     },
+    buttonsContainer: {
+      width: "100%",
+      padding: "1rem",
+    },
     menuButtons: {
       width: "100%",
-      fontSize: isMobile ? "1rem" : "1.6rem",
-      top: 22,
+      fontSize: isMobile ? "1.4rem" : "1.6rem",
       textTransform: "capitalize",
       color: "#000",
       display: "flex",
-      gap: isMobile? "0.2rem":"1rem",
-      display: "flex",
-      justifyContent: "flex-start",
+      alignItems: "center",
+      justifyContent: "start",
     },
-    buttonsContainer: {
-      marginTop: isMobile ? "1rem" : "1.5rem",
-      width: "100%",
-    },
+
+    strong: {
+      fontSize: isMobile ? "1.4rem" : "1.5rem",
+    }
   };
 };

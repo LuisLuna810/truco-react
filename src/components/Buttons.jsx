@@ -8,7 +8,6 @@ export const Buttons = ({team}) => {
         decrementPoint: state.decrementPoint,
       }));
 
-
   return (
       <div style={{display:"flex", flexDirection:"column", gap:"2rem", width:"50%", alignItems:"center"}}>
         <Button onClick={()=> incrementPoint(team)} sx={{width:"fit-content"}}>
