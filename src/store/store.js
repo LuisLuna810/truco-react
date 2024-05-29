@@ -11,8 +11,14 @@ export const useStore = create((set) => ({
   pointsTeamB: 0,
   incrementPoint: (team) =>
     set((state) => ({
-      pointsTeamA: team === "teamA" ? state.pointsTeamA + 1 : state.pointsTeamA,
-      pointsTeamB: team === "teamB" ? state.pointsTeamB + 1 : state.pointsTeamB,
+      pointsTeamA: 
+        team === "teamA" && state.pointsTeamA < state.listPoints[state.limitIndex]
+          ? state.pointsTeamA + 1
+          : state.pointsTeamA,
+      pointsTeamB: 
+        team === "teamB" && state.pointsTeamB < state.listPoints[state.limitIndex]
+          ? state.pointsTeamB + 1
+          : state.pointsTeamB,
     })),
   decrementPoint: (team) =>
     set((state) => ({
@@ -31,7 +37,7 @@ export const useStore = create((set) => ({
   setOpenMenu: () => set((state) => ({ openMenu: !state.openMenu })),
 
   //Points limits 
-  listPoints:["15","18","30"],
+  listPoints:[15,18,30],
   limitIndex: 0,
   setLimitPoints: ()=>set((state)=>({limitIndex: state.limitIndex >= state.listPoints.length - 1? 0 : state.limitIndex + 1}))
 }));

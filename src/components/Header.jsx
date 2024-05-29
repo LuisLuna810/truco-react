@@ -11,11 +11,14 @@ export function Header() {
   const styles = HeaderStyles();
   const { openMenu,setOpenMenu} = useStore((state) => ({
     openMenu: state.openMenu,
-    setOpenMenu: state.setOpenMenu
+    setOpenMenu: state.setOpenMenu,
+    pointsTeamA: state.pointsTeamA,
+    pointsTeamB: state.pointsTeamB,
   }));
 
   return (
     <>
+      
       <div className="bg-zinc-900" style={styles.container} >
         <h1 style={{ fontWeight: "bold", fontSize: "1.8rem" }}>Truco</h1>
         <Button sx={{ color: "#FFF" }} onClick={setOpenMenu}>
